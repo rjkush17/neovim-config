@@ -14,9 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure )to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -32,21 +29,3 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
-local builtin = require("telescope.builtin")
-vim.keymap.set('n','<C-p>', builtin.find_files,{})
-
--- set neotree shortcut 
-vim.keymap.set('n', '<C-b>',':Neotree filesystem toggle left<CR>',{})
-
--- Set the colorscheme after Lazy.nvim loads
-vim.cmd.colorscheme("catppuccin")
-
--- tree sitter configs
-local configs = require("nvim-treesitter.configs")
-    configs.setup({
-          ensure_installed = {"lua", "typescript", "ruby", "css", "javascript", "html" },
-          sync_install = false,
-          highlight = { enable = true },
-          indent = { enable = true },  
-        })
