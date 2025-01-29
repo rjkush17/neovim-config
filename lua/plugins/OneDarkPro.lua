@@ -21,7 +21,7 @@ return
     code_style = {
         comments = 'italic',
         keywords = 'bold',
-        functions = 'none',
+        functions = 'italic',
         strings = 'italic',
         variables = 'none'
     },
