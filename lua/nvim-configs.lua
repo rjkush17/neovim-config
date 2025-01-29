@@ -4,3 +4,4 @@ vim.g.maplocalleader = "\\"
 -- For enable line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+
