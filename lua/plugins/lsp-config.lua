@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "solargraph" } -- Add other LSPs as needed
+				ensure_installed = { "lua_ls", "ts_ls", "solargraph", "ruby_lsp" } -- Add other LSPs as needed
 			})
 		end
 	},
@@ -26,6 +26,9 @@ return {
 
 			-- Ruby LSP setup
 			lspconfig.solargraph.setup({})
+
+			-- Ruby LSP setup
+			lspconfig.ruby_lsp.setup({})
 
 			-- Key mappings for LSP functionality
 			vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = "LSP Hover" }) -- Fix typo: 'k' -> 'K'
