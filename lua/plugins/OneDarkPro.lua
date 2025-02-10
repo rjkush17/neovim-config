@@ -11,7 +11,7 @@ return {
         functions = { style = "italic" },
       },
       options = {
-        transparency = false, -- Set true for transparent background
+        transparency = true, -- Set true for transparent background
         terminal_colors = true,
       },
     })
@@ -19,3 +19,4 @@ return {
   end,
 }
 
+--  testing
